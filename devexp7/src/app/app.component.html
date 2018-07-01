@@ -1,0 +1,9 @@
+<app-error *ngIf="errorService.message">
+  {{errorService.message}}
+</app-error>
+
+
+<div *ngFor="let u of data.utenti">
+  {{u.nome}}
+</div>
+

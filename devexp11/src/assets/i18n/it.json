@@ -1,0 +1,7 @@
+{
+  "loading": "Caricamento in corso...",
+  "user": {
+    "email": "Inserisci l'email",
+    "password": "Inserisci la password"
+  }
+}

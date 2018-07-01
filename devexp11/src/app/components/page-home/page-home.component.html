@@ -1,0 +1,12 @@
+
+<loading></loading>
+
+<button (click)="mostraModale = true">Mostra popup</button>
+
+<modal
+  *ngIf="mostraModale"
+  title="Titolo del popup"
+  (close)="mostraModale = false"
+>
+  contenuto del popup
+</modal>

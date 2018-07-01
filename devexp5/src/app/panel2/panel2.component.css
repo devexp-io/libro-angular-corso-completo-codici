@@ -1,0 +1,16 @@
+.panel {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid darkgray;
+  background-color: lightgray;
+  color: #1a1a1a;
+}
+
+.sotto-panel {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #a93c69;
+  background-color: #d39aa0;
+  color: #750228;
+  font-size: 10px;
+}

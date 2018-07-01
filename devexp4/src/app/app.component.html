@@ -1,0 +1,26 @@
+{{dati.booleano}}<br>
+
+<app-switcher [value]="dati.booleano" (valueChange)="dati.booleano = $event; utente.nome = 'Ma'"></app-switcher><br>
+
+
+{{utente.nome}}<br>
+
+<app-uppercaser [(testo)]="utenteClonato.nome"></app-uppercaser><br>
+<app-lowercaser [(testo)]="utenteClonato.nome"></app-lowercaser><br>
+
+
+
+<modal [title]="'Errore'">
+  <div>Errore nel caricamento dei dati</div>
+</modal>
+
+
+
+
+
+
+
+
+
+
+

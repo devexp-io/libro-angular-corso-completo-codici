@@ -1,0 +1,13 @@
+
+<mio-componente></mio-componente>
+<br>
+
+
+<componente-con-input [dato]="'una stringa qualunque'"></componente-con-input>
+
+<componente-con-output (evento)="loggaEvento($event)"></componente-con-output>
+
+
+<secondo-componente [dato2]="datoPerSecondoComponente"
+                    (clickBottone)="loggaEvento($event)">
+</secondo-componente>

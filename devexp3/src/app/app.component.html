@@ -1,0 +1,12 @@
+<button (click)="mostraCognomiUtenti = !mostraCognomiUtenti">Mostra/Nascondi cognomi</button><br>
+Mostra cognomi: {{mostraCognomiUtenti}}
+<div *ngFor="let u of utenti">
+  <app-utente [user]="u" [mostraCognome]="mostraCognomiUtenti"></app-utente>
+</div>
+
+
+<!-- esempio di errore null su template
+     e come evitarlo con l'uso dell'elvis operator -->
+<div>
+  {{x?.value}}
+</div>

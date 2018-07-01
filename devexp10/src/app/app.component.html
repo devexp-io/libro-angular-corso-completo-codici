@@ -1,0 +1,143 @@
+{{user.username}}
+<form>
+  <input type="text"
+         [value]="user.username"
+         (keyup)="user.username = $event.target.value" />
+
+</form>
+
+<hr>
+
+{{user.username}}
+<form>
+  <input type="text" name="username"
+         [(ngModel)]="user.username" />
+
+</form>
+
+
+<hr>
+
+<form>
+  <input type="text" name="username"
+         [ngModel]="user.username" (ngModelChange)="user.username = $event"/>
+
+</form>
+
+<hr>
+
+<form>
+  {{numeroSelezionato | json}}
+  <select name="numero" [(ngModel)]="numeroSelezionato">
+    <option [ngValue]="{v: 1}">Uno</option>
+    <option [ngValue]="{v: 2}">Due</option>
+    <option [ngValue]="{v: 3}">Tre</option>
+  </select>
+</form>
+
+<hr>
+
+<form>
+  <select name="utente" [(ngModel)]="utenteSelezionato" placeholder="nome">
+    <option [ngValue]="undefined" disabled selected>Seleziona un utente</option>
+    <option [ngValue]="u" *ngFor="let u of utenti">{{u.nome}}</option>
+  </select> <br>
+
+  {{utenteSelezionato | json}}
+</form>
+
+<hr>
+<form>
+  <input [attr.checked]="variabileBooleana"
+         type="checkbox"
+         [(ngModel)]="variabileBooleana" name="booleano">
+  {{variabileBooleana}}
+</form>
+
+
+<hr>
+
+<form (ngSubmit)="stampaForm($event)">
+  <input name="nome" [(ngModel)]="user.username" />
+  <button type="submit">INVIA</button>
+</form>
+
+<hr>
+
+<form>
+  <input type="text" name="nome"
+         [(ngModel)]="user.username"
+         (keyup)="controllaUsername()"
+         [class.error]="erroreInput1"/>
+</form>
+
+<hr>
+
+<form>
+  <input type="text" name="nome" required pattern="[a-zA-Z]+"
+         [(ngModel)]="user.username"   />
+  <input type="text" name="nato-il" required pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}"
+         [(ngModel)]="user.anno"/>
+</form>
+
+<hr>
+
+<form #userForm="ngForm">
+  <input type="text" name="nome" required pattern="[a-zA-Z]+"
+         [(ngModel)]="user.username" #usernameInput="ngModel"   />
+
+  <div *ngIf="usernameInput.invalid">
+    Nome non valido
+  </div>
+  <div *ngIf="userForm.invalid">
+    Form non valido
+  </div>
+</form>
+
+
+
+
+
+
+
+<hr>
+
+<form #nuovoUtenteForm="ngForm">
+
+
+  <input type="text" placeholder="Inserisci il nome"
+         #nomeInput="ngModel" required pattern="[a-zA-Z]+"
+         name="nome" [(ngModel)]="nuovoUtente.nome" />
+  <small *ngIf="nomeInput.dirty && nomeInput.invalid">*Il nome deve contenere solo testo</small>
+  <br>
+
+  <input type="text" placeholder="Inserisci il cognome"
+         #cognomeInput="ngModel" required pattern="[a-zA-Z]+"
+         name="cognome" [(ngModel)]="nuovoUtente.cognome" />
+  <small *ngIf="cognomeInput.dirty && cognomeInput.invalid">*Il cognome deve contenere solo testo</small>
+  <br>
+
+
+  <input type="text" placeholder="Inserisci l'età"
+         #etaInput="ngModel" required pattern="[0-9]+"
+         name="eta" [(ngModel)]="nuovoUtente.eta" />
+  <small *ngIf="etaInput.dirty && etaInput.invalid">*L'età deve contenere solo numeri</small>
+  <br>
+
+  <small *ngIf="nuovoUtenteForm.dirty && nuovoUtenteForm.invalid">
+    Controlla nome, cognome e età
+  </small>
+  <button [disabled]="nuovoUtenteForm.invalid"
+          (click)="validaESalva()">SALVA</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+

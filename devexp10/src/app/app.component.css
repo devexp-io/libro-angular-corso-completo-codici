@@ -1,0 +1,30 @@
+option:first-child {
+  color: #999;
+}
+
+input.ng-valid.ng-dirty {
+  border: 1px solid #57ffba;
+}
+
+input.ng-invalid.ng-dirty {
+  border: 1px solid #ff4b37;
+}
+
+small {
+  color: #ff4b37;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

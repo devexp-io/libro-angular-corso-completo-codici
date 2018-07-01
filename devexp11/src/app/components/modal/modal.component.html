@@ -1,0 +1,10 @@
+<input type="checkbox" id="{{modalId}}" checked class="modal">
+<div (click)="close.emit()">
+  <div class="card">
+    <label for="{{modalId}}" class="modal-close" (click)="close.emit()" ></label>
+    <h3 class="section">{{title}}</h3>
+    <p class="section">
+      <ng-content></ng-content>
+    </p>
+  </div>
+</div>

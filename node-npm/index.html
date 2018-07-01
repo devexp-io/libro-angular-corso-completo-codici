@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node - NPM</title>
+    <script type="text/javascript" src="node_modules/moment/moment.js"></script>
+</head>
+<body>
+
+<div id="date"></div>
+
+<script type="text/javascript">
+    var date1 = new Date();
+    var formatted = moment(date1).format("DD/MM/YYYY");
+    document.getElementById("date").innerText = formatted;
+</script>
+
+</body>
+</html>
+
+
+
+
+

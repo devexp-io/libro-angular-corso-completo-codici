@@ -1,0 +1,16 @@
+<div>
+  Nome: {{utenti[0].nome}}
+  Cognome: {{utenti[0].cognome}}
+  Età: {{utenti[0].eta}}
+</div>
+<div>
+  Nome: {{utenti[1].nome}}
+  Cognome: {{utenti[1].cognome}}
+  Età: {{utenti[1].eta}}
+</div>
+
+<div *ngFor="let u of utenti">
+  Nome: {{u.nome}}
+  Cognome: {{u.cognome}}
+  Età: {{u.eta}}
+</div>

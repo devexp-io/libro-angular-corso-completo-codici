@@ -1,0 +1,8 @@
+.grassetto {
+  font-weight: bold;
+}
+
+
+::ng-deep .alert {
+  background-color: red;
+}

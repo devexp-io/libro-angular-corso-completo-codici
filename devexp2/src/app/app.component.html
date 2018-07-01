@@ -1,0 +1,53 @@
+<div *ngFor="let u of utenti">
+  <app-utente [user]="u" *ngIf="u.eta >= 18"></app-utente>
+  <div *ngIf="u.eta < 18">Utente {{u.nome}} non visualizzato completamente perché minorenne</div>
+</div>
+
+<div *ngFor="let u of utenti">
+  <!-- esempio di applicazione di una classe sfruttando l'ngIf -->
+  <div *ngIf="u.eta < 18" class="warning">
+    Testo di esempio
+  </div>
+  <div *ngIf="!(u.eta < 18)">
+    Testo di esempio
+  </div>
+</div>
+
+<div *ngFor="let u of utenti">
+  <!-- esempio classe condizionale -->
+  <div [class.warning]="u.eta < 18">
+    Testo di esempio
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div [ngClass]="classiJson"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

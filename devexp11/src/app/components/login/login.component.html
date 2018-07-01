@@ -1,0 +1,14 @@
+<form>
+  <fieldset>
+    <legend>Esegui il login</legend>
+    <label for="username">Username/E-mail</label><br>
+    <input type="text" id="username" #usernameInput placeholder="Username"/><br>
+
+    <label for="password">Password</label><br>
+    <input type="password" id="password" #passwordInput placeholder="Password"/><br>
+  </fieldset>
+  <button (click)="doLogin(usernameInput.value, passwordInput.value)">Login</button>
+  <div class="card error" *ngIf="error">
+    Perfavore inserisci uno username e una password validi
+  </div>
+</form>

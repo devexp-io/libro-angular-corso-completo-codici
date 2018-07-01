@@ -1,0 +1,32 @@
+<span (click)="value = !value; valueChange.emit(value)">
+
+  <svg *ngIf="value === true"> <!-- svg che disegna lo switcher attivo (verde) -->
+    <g>
+      <rect ry="5.625" rx="5.625" y="7.4375" x="0" height="16.625" width="32"
+            style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <circle r="6.65625" cy="15.75" cx="24.34375"
+              style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    </g>
+  </svg>
+
+  <svg *ngIf="value === false"> <!-- svg che disegna lo switcher NON attivo (grigio) -->
+    <g>
+      <rect
+        ry="5.625"
+        rx="5.625"
+        y="7.4375"
+        x="0"
+        height="16.625"
+        width="32"
+        id="rect1925"
+        style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+      <circle
+        r="6.65625"
+        cy="15.75"
+        cx="7.28125"
+        id="path1927"
+        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"/>
+    </g>
+  </svg>
+
+</span>

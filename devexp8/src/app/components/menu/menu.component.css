@@ -1,0 +1,15 @@
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+  padding: 4px;
+  margin: 4px;
+  background-color: darkgray;
+}
+
+li a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
